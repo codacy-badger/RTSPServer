@@ -10,7 +10,7 @@ RecordService::RecordService()
       stream_queue_(nullptr),
       first_pts_(0),
       duration_min(10),
-      record_dir("/data/record") {
+      record_dir("./record") {
     time_ = Time::getInstance();
     File::createDir(record_dir);
 }

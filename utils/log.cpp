@@ -11,7 +11,7 @@ void Log::init() {
         auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
         console_sink->set_level(spdlog::level::info);
 
-        auto file_sink = std::make_shared<spdlog::sinks::rotating_file_sink_mt>("/data/logs.txt", 1024*1024*10, 1);
+        auto file_sink = std::make_shared<spdlog::sinks::rotating_file_sink_mt>("./logs.txt", 1024*1024*10, 1);
         file_sink->set_level(spdlog::level::debug);
 
         sinks_.push_back(console_sink);
