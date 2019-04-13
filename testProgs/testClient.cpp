@@ -8,15 +8,17 @@
 
 int main(int argc, char **argv) {
     const std::string url = "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"; // CCTV1
+    Log *log = Log::getInstance();
     TranscodeService *transcodeService = new TranscodeService();
     RecordService *recordService = new RecordService();
     IdleService *idleService = new IdleService();
-    Log *log = Log::getInstance();
     std::shared_ptr<StreamQueue> streamQueue = std::make_shared<StreamQueue>();
     boost::asio::io_service io_service;
     boost::asio::signal_set signals(io_service, SIGINT, SIGALRM);
 
     Util::enable_core_dump();
+
+    log->init();
 
     transcodeService->setStreamQueue(streamQueue);
     transcodeService->init(url);
@@ -58,6 +60,8 @@ int main(int argc, char **argv) {
 
     transcodeService->destory();
     delete(transcodeService);
+
+    log->destroy();
 
     return 0;
 }

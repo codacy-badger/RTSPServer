@@ -14,8 +14,9 @@ void Util::enable_core_dump() {
     if (setrlimit(RLIMIT_CORE, &corelim) != 0) {
         printf("[%s#%d]setrlimit failed!!!\n", __func__, __LINE__);
     }
-
+#if defined(__linux__)
     if (0 != system("echo \"/data/core-%p\" > /proc/sys/kernel/core_pattern")) {
         printf("[%s#%d]configure core_pattern failed\n", __func__, __LINE__);
     }
+#endif
 }
