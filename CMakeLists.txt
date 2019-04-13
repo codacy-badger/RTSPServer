@@ -14,7 +14,7 @@ include(cpplint)
 
 if (DEBUG)
     set(CMAKE_VERBOSE_MAKEFILE ON)
-    list(APPEND CMAKE_CXX_FLAGS "-g -O0 -rdynamic")
+    list(APPEND CMAKE_CXX_FLAGS "-g -O0")
 else ()
     list(APPEND CMAKE_CXX_FLAGS "-O2")
     add_definitions(-DNDEBUG)
