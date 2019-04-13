@@ -7,7 +7,7 @@
 #include "client/record_service.h"
 
 int main(int argc, char **argv) {
-    const std::string url = "http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8"; // CCTV1
+    const std::string url = "your Rtsp stream URL Here";
     Log *log = Log::getInstance();
     TranscodeService *transcodeService = new TranscodeService();
     RecordService *recordService = new RecordService();
