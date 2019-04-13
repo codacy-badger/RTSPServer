@@ -1,6 +1,6 @@
 {
   "name": "RTSPServer",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -28,5 +28,8 @@
     "ghooks": {
         "commit-msg": "./validate-commit-msg.js"
     }
-  }
+  },
+  "scripts": {
+      "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+   }
 }
