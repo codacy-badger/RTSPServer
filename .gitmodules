@@ -1,0 +1,3 @@
+[submodule "live555"]
+	path = live555
+	url = https://github.com/kgbook/live555.git

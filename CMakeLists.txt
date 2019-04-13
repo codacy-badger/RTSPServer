@@ -55,6 +55,7 @@ link_directories(${libavformat_LIBRARY_DIRS}
 
 add_subdirectory(skeleton)
 add_subdirectory(utils)
+add_subdirectory(live555)
 #add_subdirectory(server)
 add_subdirectory(client)
 add_subdirectory(testProgs)
