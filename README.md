@@ -12,6 +12,7 @@ Pull stream from RTSPServer using FFmpeg, support H.264/H.265 wrapper into MP4 c
 - [Boost](https://www.boost.org/) at least 1.66.0
 - [fmt](https://github.com/fmtlib/fmt)
 - [python](https://www.python.org/) 2.7 required
+- [cmake](https://cmake.org/) 3.7 required
 
 # Build
 ```
