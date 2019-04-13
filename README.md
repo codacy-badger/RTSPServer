@@ -11,11 +11,18 @@ Pull stream from RTSPServer using FFmpeg, support H.264/H.265 wrapper into MP4 c
 - [spdlog](https://github.com/gabime/spdlog)
 - [Boost](https://www.boost.org/) at least 1.66.0
 - [fmt](https://github.com/fmtlib/fmt)
+- [python](https://www.python.org/) 2.7 required
 
 # Build
 ```
 mkdir build && cd build && cmake .. && make -j2
 ```
+
+# Code Style
+The project use automated checker named **cpplint** to make sure a C++ file follows [Google's C++ style
+guide](https://google.github.io/styleguide/cppguide.html).
+
+False positives can be ignored by putting `// NOLINT` at the end of the line or `// NOLINTNEXTLINE` in the previous line.
 
 # TODO
 - RTSPServer
