@@ -44,7 +44,8 @@ include_directories(${CMAKE_SOURCE_DIR}
         ${libavcodec_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIRS}
         ${spdlog_INCLUDE_DIRS}
-        ${fmt_INCLUDE_DIRS})
+        ${fmt_INCLUDE_DIRS}
+        ${CMAKE_CURRENT_SOURCE_DIR}/live555)
 
 link_directories(${libavformat_LIBRARY_DIRS}
         ${libavutil_LIBRARY_DIRS}
@@ -55,7 +56,7 @@ link_directories(${libavformat_LIBRARY_DIRS}
 
 add_subdirectory(skeleton)
 add_subdirectory(utils)
-add_subdirectory(live555)
-#add_subdirectory(server)
 add_subdirectory(client)
+add_subdirectory(live555)
+add_subdirectory(server)
 add_subdirectory(testProgs)

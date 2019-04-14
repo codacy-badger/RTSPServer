@@ -172,7 +172,3 @@ void StreamRecord::writeVideoFrame(std::shared_ptr<AVPacket> packet) {
     }
     frame_cnt++;
 }
-
-bool StreamRecord::keyframe(std::shared_ptr<AVPacket> packet) {
-    return static_cast<bool>((packet->flags & AV_PKT_FLAG_KEY));
-}

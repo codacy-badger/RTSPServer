@@ -8,12 +8,12 @@
 #include <boost/timer/timer.hpp>
 #include <boost/chrono.hpp>
 #include <boost/thread/thread.hpp>
-#include "utils/log.h"
+//#include "utils/log.h"
 
 template <typename T>
 class FixedQueue {
 public:
-    FixedQueue(uint32_t capacity = 5) : capacity_(capacity) { log_ = Log::getInstance(); };
+    FixedQueue(uint32_t capacity = 5) : capacity_(capacity) {/* log_ = Log::getInstance();*/ };
 
     virtual ~FixedQueue()  { clear(); }
 
@@ -34,7 +34,7 @@ private:
 
     std::queue<std::shared_ptr<T>> queue_;
 
-    Log*  log_;
+//    Log*  log_;
 };
 
 template<typename T>

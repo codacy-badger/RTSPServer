@@ -24,6 +24,8 @@ public:
 
     virtual bool dumpPacket(std::string url, AVPacket *packet);
 
+    static inline bool keyframe(std::shared_ptr<AVPacket> packet) { return static_cast<bool>((packet->flags & AV_PKT_FLAG_KEY)); }
+
 protected:
     Log *log_;
 };

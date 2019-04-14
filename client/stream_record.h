@@ -30,8 +30,6 @@ private:
 
     AVCodecID getCodecID();
 
-    bool keyframe(std::shared_ptr<AVPacket> packet);
-
 private:
     AVOutputFormat *oformat;
 
