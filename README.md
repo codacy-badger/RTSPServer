@@ -1,6 +1,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/kgbook/RTSPServer)
 
 # RTSPServer
+Push H.264/H.265 bitstream using live555.
 
 # RTSPClient
 Pull stream from RTSPServer using FFmpeg, support H.264/H.265 wrapper into MP4 container.
