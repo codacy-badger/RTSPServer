@@ -26,5 +26,5 @@ guide](https://google.github.io/styleguide/cppguide.html).
 
 False positives can be ignored by putting `// NOLINT` at the end of the line or `// NOLINTNEXTLINE` in the previous line.
 
-# TODO
-- [FIXME: make_value is ambiguous on macOS Mojave 10.14.4, fmt 5.3.0](https://github.com/fmtlib/fmt/issues/1115)
+# Memo
+- [make_value is ambiguous on macOS Mojave 10.14.4, fmt 5.3.0](https://github.com/fmtlib/fmt/issues/1115)
