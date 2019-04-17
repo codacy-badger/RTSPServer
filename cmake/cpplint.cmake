@@ -42,6 +42,7 @@ set(STYLE_FILTER ${STYLE_FILTER}-build/include_order,)
 set(STYLE_FILTER ${STYLE_FILTER}-build/namespaces,)
 set(STYLE_FILTER ${STYLE_FILTER}-build/include_what_you_use,)
 set(STYLE_FILTER ${STYLE_FILTER}-build/include,)
+set(STYLE_FILTER ${STYLE_FILTER}-build/explicit_make_pair,)
 
 set(STYLE_FILTER ${STYLE_FILTER}-readability/streams,)
 set(STYLE_FILTER ${STYLE_FILTER}-readability/todo,)
