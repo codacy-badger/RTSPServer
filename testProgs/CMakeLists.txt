@@ -13,6 +13,6 @@ add_executable(serverApp testServer.cpp)
 target_link_libraries(clientApp skeleton client utils fmt avformat avcodec avutil
         boost_thread-mt boost_filesystem-mt boost_system-mt boost_chrono-mt)
 
-target_link_libraries(serverApp skeleton client utils fmt
+target_link_libraries(serverApp skeleton server utils fmt
         liveMedia BasicUsageEnvironment UsageEnvironment groupsock
         boost_thread-mt boost_filesystem-mt boost_system-mt boost_chrono-mt)
