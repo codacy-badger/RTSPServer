@@ -45,18 +45,19 @@ include_directories(${CMAKE_SOURCE_DIR}
         ${libavcodec_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIRS}
         ${spdlog_INCLUDE_DIRS}
-        ${fmt_INCLUDE_DIRS}
-        ${CMAKE_CURRENT_SOURCE_DIR}/live555)
+#        ${fmt_INCLUDE_DIRS}
+        ${CMAKE_CURRENT_SOURCE_DIR}/live555
+        ${CMAKE_CURRENT_SOURCE_DIR}/fmt/include)
 
 link_directories(${libavformat_LIBRARY_DIRS}
         ${libavutil_LIBRARY_DIRS}
         ${libavcodec_LIBRARY_DIRS}
         ${Boost_LIBRARY_DIRS}
         ${spdlog_LIBRARY_DIRS}
-        ${fmt_LIBRARY_DIRS}
+#        ${fmt_LIBRARY_DIRS}
         )
 
-#add_subdirectory(fmt) # seems to be not support built as submodule, built solely and replace with the latest library
+add_subdirectory(fmt)
 add_subdirectory(skeleton)
 add_subdirectory(utils)
 add_subdirectory(client)
