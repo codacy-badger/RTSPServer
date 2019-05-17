@@ -40,6 +40,7 @@ if (NOT Boost_FOUND)
 endif ()
 
 include_directories(${CMAKE_SOURCE_DIR}
+        ${CMAKE_SOURCE_DIR}/common
         ${libavformat_INCLUDE_DIRS}
         ${libavutil_INCLUDE_DIRS}
         ${libavcodec_INCLUDE_DIRS}
@@ -58,8 +59,7 @@ link_directories(${libavformat_LIBRARY_DIRS}
         )
 
 add_subdirectory(fmt)
-add_subdirectory(skeleton)
-add_subdirectory(utils)
+add_subdirectory(common)
 add_subdirectory(client)
 add_subdirectory(live555)
 add_subdirectory(server)

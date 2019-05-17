@@ -1,10 +1,10 @@
 {
   "name": "RTSPServer",
   "version": "0.0.1",
-  "description": "",
+  "description": "[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/kgbook/RTSPServer)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "repository": {
     "type": "git",
@@ -26,10 +26,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "ghooks": {
-        "commit-msg": "./validate-commit-msg.js"
+      "commit-msg": "./validate-commit-msg.js"
     }
-  },
-  "scripts": {
-      "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
-   }
+  }
 }
