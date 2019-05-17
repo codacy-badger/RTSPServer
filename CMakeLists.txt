@@ -41,14 +41,14 @@ endif ()
 
 include_directories(${CMAKE_SOURCE_DIR}
         ${CMAKE_SOURCE_DIR}/common
+        ${CMAKE_SOURCE_DIR}/third_party
         ${libavformat_INCLUDE_DIRS}
         ${libavutil_INCLUDE_DIRS}
         ${libavcodec_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIRS}
         ${spdlog_INCLUDE_DIRS}
-#        ${fmt_INCLUDE_DIRS}
-        ${CMAKE_CURRENT_SOURCE_DIR}/live555
-        ${CMAKE_CURRENT_SOURCE_DIR}/fmt/include)
+#        ${fmt_INCLUDE_DIRS})
+        )
 
 link_directories(${libavformat_LIBRARY_DIRS}
         ${libavutil_LIBRARY_DIRS}
@@ -58,9 +58,8 @@ link_directories(${libavformat_LIBRARY_DIRS}
 #        ${fmt_LIBRARY_DIRS}
         )
 
-add_subdirectory(fmt)
 add_subdirectory(common)
+add_subdirectory(third_party)
 add_subdirectory(client)
-add_subdirectory(live555)
 add_subdirectory(server)
 add_subdirectory(testProgs)

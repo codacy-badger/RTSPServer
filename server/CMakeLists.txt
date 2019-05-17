@@ -1,8 +1,9 @@
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/../live555/liveMedia/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/../live555/groupsock/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/../live555/BasicUsageEnvironment/include
-        ${CMAKE_CURRENT_SOURCE_DIR}/../live555/UsageEnvironment/include)
+        ${CMAKE_CURRENT_SOURCE_DIR}/../third_party/live555
+        ${CMAKE_CURRENT_SOURCE_DIR}/../third_party/live555/liveMedia/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/../third_party/live555/groupsock/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/../third_party/live555/BasicUsageEnvironment/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/../third_party/live555/UsageEnvironment/include)
 
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} server_src)
 
