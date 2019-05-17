@@ -20,11 +20,11 @@ Pull stream from RTSPServer using FFmpeg, support H.264/H.265 wrapper into MP4 c
 mkdir build && cd build && cmake .. && make -j2
 ```
 
+1. assign `OFF` to `linux-cross` variable, if not cross compile, see [third_party/live555/CMakeLists.txt](third_party/live555/CMakeLists.txt).
+2. [fmt 5.3.0 version perhaps not work well on macOS 10.14.4](https://github.com/fmtlib/fmt/issues/1115), built as submodule if failed.
+
 # Code Style
 The project use automated checker named **cpplint** to make sure a C++ file follows [Google's C++ style
 guide](https://google.github.io/styleguide/cppguide.html).
 
 False positives can be ignored by putting `// NOLINT` at the end of the line or `// NOLINTNEXTLINE` in the previous line.
-
-# Memo
-- [make_value is ambiguous on macOS Mojave 10.14.4, fmt 5.3.0](https://github.com/fmtlib/fmt/issues/1115)

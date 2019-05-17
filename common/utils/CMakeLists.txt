@@ -1,4 +1,5 @@
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../third_party/fmt/include)
 
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} utils_src)
 
