@@ -31,7 +31,7 @@ pkg_check_modules(libavformat REQUIRED libavformat)
 pkg_check_modules(libavutil REQUIRED libavutil)
 pkg_check_modules(libavcodec REQUIRED libavcodec)
 pkg_check_modules(spdlog REQUIRED spdlog)
-pkg_check_modules(fmt REQUIRED fmt)    # fmt 5.3.0 issue on macOS 10.14.4, use as submodule
+#pkg_check_modules(fmt REQUIRED fmt)    # fmt 5.3.0 issue on macOS 10.14.4, use as submodule
 
 set(Boost_USE_STATIC_LIBS OFF)
 set(Boost_USE_MULTITHREADED ON)
@@ -49,7 +49,7 @@ include_directories(${CMAKE_SOURCE_DIR}
         ${libavcodec_INCLUDE_DIRS}
         ${Boost_INCLUDE_DIRS}
         ${spdlog_INCLUDE_DIRS}
-        ${fmt_INCLUDE_DIRS}
+#        ${fmt_INCLUDE_DIRS}
         )
 
 link_directories(${libavformat_LIBRARY_DIRS}
@@ -57,7 +57,7 @@ link_directories(${libavformat_LIBRARY_DIRS}
         ${libavcodec_LIBRARY_DIRS}
         ${Boost_LIBRARY_DIRS}
         ${spdlog_LIBRARY_DIRS}
-        ${fmt_LIBRARY_DIRS}
+#        ${fmt_LIBRARY_DIRS}
         )
 
 add_subdirectory(common)
