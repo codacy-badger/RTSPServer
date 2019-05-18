@@ -14,6 +14,7 @@ Pull stream from RTSPServer using FFmpeg, support H.264/H.265 wrapper into MP4 c
 - [fmt](https://github.com/fmtlib/fmt)
 - [python](https://www.python.org/) 2.7 required
 - [cmake](https://cmake.org/) 3.7 required
+- pkg-config
 
 # Build
 ```
@@ -30,6 +31,3 @@ The project use automated checker named **cpplint** to make sure a C++ file foll
 guide](https://google.github.io/styleguide/cppguide.html).
 
 False positives can be ignored by putting `// NOLINT` at the end of the line or `// NOLINTNEXTLINE` in the previous line.
-
-# Memo
-- [make_value is ambiguous on macOS Mojave 10.14.4, fmt 5.3.0](https://github.com/fmtlib/fmt/issues/1115)
