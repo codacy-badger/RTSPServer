@@ -23,10 +23,10 @@ time_t Time::getTimestamp() {
 std::string Time::getTimeString(TimeFormat time_format) {
     std::string time_str;
     auto utc_tm = getTm();
-    char buf[64];
 
     switch (time_format) {
         case TimeFormat::YYYYMMDD_hhmmss : {
+            char buf[64] = "";
             snprintf(buf, sizeof(buf), "%04d-%02d-%02d %02d:%02d:%02d", utc_tm->tm_year + 1900, utc_tm->tm_mon + 1,
                      utc_tm->tm_mday, utc_tm->tm_hour, utc_tm->tm_min, utc_tm->tm_sec);
 
@@ -44,7 +44,6 @@ std::string Time::getTimeString(TimeFormat time_format) {
 std::string Time::timestamp_to_string(uint64_t ts, TimeZone tz) {
     struct tm utc_tm;
     time_t tmp_ts = ts;
-    char buf[128] = "";
     switch (tz) {
         case TimeZone::UTC08 : {
             tmp_ts += 8*60*60;
@@ -56,6 +55,7 @@ std::string Time::timestamp_to_string(uint64_t ts, TimeZone tz) {
         }
     }
     if (nullptr != gmtime_r(&tmp_ts, &utc_tm)) {
+        char buf[128] = "";
         snprintf(buf,
                  sizeof(buf),
                  "%04d-%02d-%02d_%02d%02d%02d",
