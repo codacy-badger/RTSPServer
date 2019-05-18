@@ -1,13 +1,13 @@
 [![Build Status](https://travis-ci.org/kgbook/RTSPServer.svg?branch=dev)](https://travis-ci.org/kgbook/RTSPServer)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/kgbook/RTSPServer)
 
-# RTSPServer
+## RTSPServer
 Push H.264/H.265 bitstream using live555.
 
-# RTSPClient
+## RTSPClient
 Pull stream from RTSPServer using FFmpeg, support H.264/H.265 wrapper into MP4 container.
 
-# Dependencies
+## Dependencies
 - [FFmpeg](https://ffmpeg.org/)
 - [live555](http://www.live555.com/)
 - [spdlog](https://github.com/gabime/spdlog)
@@ -17,7 +17,7 @@ Pull stream from RTSPServer using FFmpeg, support H.264/H.265 wrapper into MP4 c
 - [cmake](https://cmake.org/) 3.7 required
 - pkg-config
 
-# Build
+## Build
 ```
 git submodule update --init --remote --recursive
 chmod +x build.sh
@@ -27,7 +27,7 @@ bash build.sh
 1. assign `OFF` to `linux-cross` variable, if not cross compile, see [third_party/live555/CMakeLists.txt](third_party/live555/CMakeLists.txt).
 2. [fmt 5.3.0 version perhaps not work well on macOS 10.14.4](https://github.com/fmtlib/fmt/issues/1115), built as submodule if failed.
 
-# Code Style
+## Code Style
 The project use automated checker named **cpplint** to make sure a C++ file follows [Google's C++ style
 guide](https://google.github.io/styleguide/cppguide.html).
 
