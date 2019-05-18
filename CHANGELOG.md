@@ -1,12 +1,11 @@
-<a name="0.0.1"></a>
-## 0.0.1 (2019-05-18)
+# changelog
 
+## 0.0.1 (2019-05-18)
 
 ### Bug Fixes
 
 * **fmt:** built as submodule to fix issue:make_value is ambiguous on macOS ([1a47866](https://github.com/kgbook/RTSPServer/commit/1a47866))
 * **platform:** Permission denied for writing data to /data ([3ef32d6](https://github.com/kgbook/RTSPServer/commit/3ef32d6))
-
 
 ### Features
 
