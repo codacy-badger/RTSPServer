@@ -61,7 +61,6 @@ void RTSPStreamServer::removeStream(std::string streamName) {
 
 ServerMediaSession *RTSPStreamServer::lookupServerMediaSession(char const *streamName,
                                                                Boolean isFirstLookupInSession) {
-    HashTable::Iterator *iterator = nullptr;
     ServerMediaSession *serverMediaSession = nullptr;
     RTSPStreamInput *streamInput = nullptr;
     const char *key = nullptr;
@@ -69,7 +68,7 @@ ServerMediaSession *RTSPStreamServer::lookupServerMediaSession(char const *strea
     StreamChannel *streamChannel = nullptr;
     std::transform(strName.begin(), strName.end(), strName.begin(), ::tolower);
 
-    iterator = HashTable::Iterator::create(*fStreamTable);
+    HashTable::Iterator *iterator = HashTable::Iterator::create(*fStreamTable);
     while (nullptr != (streamInput = reinterpret_cast<RTSPStreamInput *>(iterator->next(key)))) {
         if (strName == streamInput->streamName()) {
             serverMediaSession = RTSPServer::lookupServerMediaSession(strName.c_str(), isFirstLookupInSession);
