@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/kgbook/RTSPServer.svg?branch=dev)](https://travis-ci.org/kgbook/RTSPServer)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://github.com/kgbook/RTSPServer)
 
 # RTSPServer
