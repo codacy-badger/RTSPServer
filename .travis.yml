@@ -16,6 +16,8 @@ addons:
       - boost
       - pkg-config
       - ffmpeg
+      - spdlog
+      - fmt
     update: false
 
 before_script:
