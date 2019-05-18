@@ -15,6 +15,7 @@ addons:
       - cmake
       - boost
       - pkg-config
+      - ffmpeg
     update: false
 
 before_script:
