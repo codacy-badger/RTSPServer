@@ -18,7 +18,8 @@ Pull stream from RTSPServer using FFmpeg, support H.264/H.265 wrapper into MP4 c
 
 # Build
 ```
-mkdir build && cd build && cmake .. && make -j2
+chmod +x build.sh
+bash build.sh
 ```
 
 1. assign `OFF` to `linux-cross` variable, if not cross compile, see [third_party/live555/CMakeLists.txt](third_party/live555/CMakeLists.txt).
