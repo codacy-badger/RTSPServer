@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 set(PROJECT_NAME RTSPServer)
+set(CMAKE_C_COMPILER  cc)
+set(CMAKE_CXX_COMPILER c++)
 project(${PROJECT_NAME})
 
 option(DEBUG "release or debug" OFF)

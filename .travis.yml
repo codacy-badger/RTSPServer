@@ -1,0 +1,30 @@
+language: cpp
+compiler: c++
+os: osx
+osx_image: xcode10.2
+git:
+  depth: false
+  quiet: false
+  submodules: true
+
+python: "2.7"
+
+addons:
+  homebrew:
+    packages:
+      - cmake
+      - boost
+      - pkg-config
+    update: false
+
+before_script:
+  - cmake --version
+  - python --version
+  - cc --version
+  - C++ --version
+  - mkdir build
+  - cd build
+  - cmake ..
+
+script:
+  - make
