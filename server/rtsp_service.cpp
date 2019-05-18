@@ -117,7 +117,7 @@ bool RTSPService::writeValue(std::string fname, uint64_t value) {
         return false;
     }
 
-    if (write(fd, &value, sizeof(value) < 0)) {
+    if (write(fd, &value, sizeof(value)) < 0) {
         log->errorf("[%s#%d]write failed, %s", __func__, __LINE__, strerror(errno));
         return false;
     }
