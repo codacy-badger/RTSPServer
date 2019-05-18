@@ -17,8 +17,13 @@ Pull stream from RTSPServer using FFmpeg, support H.264/H.265 wrapper into MP4 c
 
 # Build
 ```
-mkdir build && cd build && cmake .. && make -j2
+git submodule update --init --remote --recursive
+chmod +x build.sh
+bash build.sh
 ```
+
+1. assign `OFF` to `linux-cross` variable, if not cross compile, see [third_party/live555/CMakeLists.txt](third_party/live555/CMakeLists.txt).
+2. [fmt 5.3.0 version perhaps not work well on macOS 10.14.4](https://github.com/fmtlib/fmt/issues/1115), built as submodule if failed.
 
 # Code Style
 The project use automated checker named **cpplint** to make sure a C++ file follows [Google's C++ style
