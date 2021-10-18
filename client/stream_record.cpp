@@ -163,7 +163,6 @@ void StreamRecord::writeVideoFrame(std::shared_ptr<AVPacket> packet) {
     }
 
     out_packet.stream_index = out_video_stream->index;
-    out_packet.stream_index = out_video_stream->index;
     out_packet.pos = -1;
 
     if (av_interleaved_write_frame(ofmt_ctx, &out_packet) < 0) {
